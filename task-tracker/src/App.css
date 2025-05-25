@@ -1,0 +1,61 @@
+/* Base theme */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+.app-wrapper.dark body {
+  background-color: #1e1e1e;
+  color: #e4e4e4;
+}
+
+/* Container */
+.container {
+  max-width: 500px;
+  margin: 4rem auto;
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 1s ease;
+}
+
+.app-wrapper.dark .container {
+  background-color: #2b2b2b;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  color: azure;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.toggle-dark {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 1s;
+}
+
+.toggle-dark:hover {
+  background-color: #eee;
+}
+
+.app-wrapper.dark .toggle-dark {
+  border-color: #666;
+  color: #ddd;
+}
+
+.app-wrapper.dark .toggle-dark:hover {
+  background-color: #444;
+}

@@ -1,0 +1,10 @@
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Optional: subtle border in dark mode */
+.app-wrapper.dark .task-list {
+    border-color: #555;
+}
