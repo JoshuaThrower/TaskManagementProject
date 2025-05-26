@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import TaskList from "./component/TaskList"
 import AddTaskForm from "./component/AddTaskForm"
 import "./App.css"
@@ -6,6 +6,17 @@ import "./App.css"
 function App() {
   const [tasks, setTasks] = useState([])
   const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {  // Loads Tasks from local storage
+    const savedTasks = JSON.parse(localStorage.getItem("tasks"));
+    if (savedTasks) {
+      setTasks(savedTasks);
+    }
+  }, []);
+
+  useEffect(() => { // Saves Tasks to local storage
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   const addTask = (text) => {
     const newTask = {
